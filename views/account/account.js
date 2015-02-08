@@ -1,4 +1,4 @@
-var accountModule = angular.module("accountModule", ["ui.router"]);
+var accountModule = angular.module("accountModule", ["ui.router", "ngCookies"]);
 
 /* Routes */
 
@@ -14,6 +14,6 @@ accountModule.config(function ($stateProvider) {
 
 /* Controllers */
 
-accountModule.controller("accountController", function ($scope) {
-    $scope.username = "maciek";
+accountModule.controller("accountController", function ($scope, $cookies) {
+    $scope.username = $cookies.username;
 });

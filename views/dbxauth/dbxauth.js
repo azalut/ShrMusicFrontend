@@ -31,16 +31,9 @@ dbxauthModule.controller("dbxauthController", function ($scope, $cookies, $locat
 })
 .controller("authkeyController", function ($scope, $http, $cookies, $location) {
         $scope.enterAuthKey = function (authkey) {
-            jQuery.ajax({
-                url: "http://localhost:8080/account/" + authkey + "?token=" + $cookies.token,
-                type: "PUT"
-            }).success(function (data) {
-                $location.path("/account");
-            }); //TODO: have to migrate from jquery to angular ajax call
-            /*$http.put("http://localhost:8080/account/" + authkey + "?token=" + $cookies.token)
+            $http.put("http://localhost:8080/account/" + authkey + "?token=" + $cookies.token)
                 .success(function (data) {
                     $location.path("/account")
-                });*/
+                });
         };
-
     });

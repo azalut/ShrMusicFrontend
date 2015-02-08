@@ -3,5 +3,6 @@ var app = angular.module("mainApp", [
     "ngCookies",
     "accountModule",
     "createModule",
-    "dbxauthModule"
+    "dbxauthModule",
+    "filelistModule"
 ]);
