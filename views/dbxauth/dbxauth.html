@@ -1,0 +1,8 @@
+<h1 class="cover-heading">Hello, {{username}}!</h1>
+<h3>Enter your appkey and appsecret</h3>
+<div class="input-group col-xs-12 center">
+    <input type="text" class="form-control topbot-margins" maxlength="40" placeholder="appkey" ng-model="appkey">
+    <input type="text" class="form-control topbot-margins"  maxlength="40" placeholder="appsecret" ng-model="appsecret">
+
+    <div class="btn btn-lg btn-success topbot-margins" ng-click="submitAppKeySecret(appkey, appsecret)">Submit</div>
+</div>

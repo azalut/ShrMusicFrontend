@@ -1,0 +1,7 @@
+<h1 class="cover-heading">Create your account now</h1>
+<div class="input-group col-xs-12 center">
+    <input type="text" class="form-control topbot-margins {{creationError}}" maxlength="40" placeholder="Your username" ng-model="username">
+    <input type="password" class="form-control topbot-margins"  maxlength="40" placeholder="Your password" ng-model="password">
+
+    <div class="btn btn-lg {{btninfo}} topbot-margins" ng-click="createAccount(username, password)">Create account: {{username}}</div>
+</div>
