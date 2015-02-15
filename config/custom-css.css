@@ -1,0 +1,18 @@
+.filelist {
+    text-align: left;
+}
+
+.download {
+    padding: 5px;
+    color: #ec971f;
+}
+
+.download:hover{
+    background-color: #2aabd2;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+#filelist-row:hover{
+    color: #000000;
+}

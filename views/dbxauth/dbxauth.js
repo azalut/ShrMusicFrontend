@@ -1,5 +1,5 @@
 var dbxauthModule = angular.module("dbxauthModule", ["ui.router", "ngCookies"]);
-
+var host = "http://localhost:8080";
 /* Routes */
 
 dbxauthModule.config(function ($stateProvider) {
@@ -22,7 +22,7 @@ dbxauthModule.controller("dbxauthController", function ($scope, $cookies, $locat
     $scope.username = $cookies.username;
 
     $scope.submitAppKeySecret = function (appkey, appsecret) {
-        $http.get("http://localhost:8080/account/dbxauth?appkey=" + appkey + "&appsecret=" + appsecret + "&token=" + $cookies.token)
+        $http.get(host + "/account/dbxauth?appkey=" + appkey + "&appsecret=" + appsecret + "&token=" + $cookies.token)
             .success(function (data) {
                 window.open(data);
                 $location.path("/authkey");
@@ -31,7 +31,7 @@ dbxauthModule.controller("dbxauthController", function ($scope, $cookies, $locat
 })
 .controller("authkeyController", function ($scope, $http, $cookies, $location) {
         $scope.enterAuthKey = function (authkey) {
-            $http.put("http://localhost:8080/account/" + authkey + "?token=" + $cookies.token)
+            $http.put(host + "/account/" + authkey + "?token=" + $cookies.token)
                 .success(function (data) {
                     $location.path("/account")
                 });

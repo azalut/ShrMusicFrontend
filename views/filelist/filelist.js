@@ -1,5 +1,7 @@
 var filelistModule = angular.module("filelistModule", ["ui.router", "ngCookies"]);
 
+var host = "http://localhost:8080";
+
 /* Routes */
 
 filelistModule.config(function ($stateProvider) {
@@ -16,8 +18,10 @@ filelistModule.config(function ($stateProvider) {
 
 filelistModule.controller("filelistController", function ($scope, $http, $cookies) {
     var token = $cookies.token;
-    $http.get("http://localhost:8080/download?token=" + token)
+    $http.get(host + "/download?token=" + token)
         .success(function (data) {
             $scope.filenames = data;
+            $scope.host = host;
+            $scope.token = $cookies.token;
         });
 });

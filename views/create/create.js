@@ -1,5 +1,5 @@
 var createModule = angular.module("createModule", ["ui.router", "ngCookies"]);
-
+var host = "http://localhost:8080";
 /* Routes */
 
 createModule.config(function ($stateProvider) {
@@ -19,7 +19,7 @@ createModule.controller("createController", function ($scope, $http, $location, 
     $scope.createAccount = function (username, password) {
         $http({
             method: "POST",
-            url: "http://localhost:8080/user",
+            url: host + "/user",
             data: $.param({username: username, password: password}),
             headers: {'Content-Type': "application/x-www-form-urlencoded"}
         }).success(function (data, status, headers) {
@@ -27,7 +27,7 @@ createModule.controller("createController", function ($scope, $http, $location, 
                 $cookies.username = username;
                 $http({
                     method: "POST",
-                    url: "http://localhost:8080/gettoken",
+                    url: host + "/gettoken",
                     data: $.param({username: username, password: password}),
                     headers: {'Content-Type': "application/x-www-form-urlencoded"}
                 }).success(function (data) {
