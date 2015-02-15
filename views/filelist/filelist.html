@@ -1,5 +1,11 @@
 <div class="center">
     <table class="table table-hover filelist">
+        <thead>
+            <tr>
+                <th>Filename</th>
+                <th>Action</th>
+            </tr>
+        </thead>
         <tr ng-repeat="filename in filenames" id="filelist-row">
             <td>{{ filename }}</td>
             <td><a href='{{host + "/download/" + filename + "?token=" + token}}' class="download">Download</a></td>

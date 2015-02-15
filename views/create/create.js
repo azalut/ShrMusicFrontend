@@ -1,5 +1,5 @@
 var createModule = angular.module("createModule", ["ui.router", "ngCookies"]);
-var host = "http://localhost:8080";
+var host = "http://frozen-temple-2180.herokuapp.com";
 /* Routes */
 
 createModule.config(function ($stateProvider) {

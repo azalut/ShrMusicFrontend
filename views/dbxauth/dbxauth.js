@@ -1,5 +1,5 @@
 var dbxauthModule = angular.module("dbxauthModule", ["ui.router", "ngCookies"]);
-var host = "http://localhost:8080";
+var host = "http://frozen-temple-2180.herokuapp.com";
 /* Routes */
 
 dbxauthModule.config(function ($stateProvider) {

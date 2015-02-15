@@ -1,6 +1,5 @@
 var filelistModule = angular.module("filelistModule", ["ui.router", "ngCookies"]);
-
-var host = "http://localhost:8080";
+var host = "http://frozen-temple-2180.herokuapp.com";
 
 /* Routes */
 
