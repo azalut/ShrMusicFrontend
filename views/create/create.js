@@ -4,7 +4,7 @@ var host = "http://frozen-temple-2180.herokuapp.com";
 
 createModule.config(function ($stateProvider) {
     $stateProvider.state("create", {
-        url: "",
+        url: "/create",
         controller: "createController",
         templateUrl: "views/create/create.html"
     });

@@ -21,6 +21,6 @@ filelistModule.controller("filelistController", function ($scope, $http, $cookie
         .success(function (data) {
             $scope.filenames = data;
             $scope.host = host;
-            $scope.token = $cookies.token;
+            $scope.token = token;
         });
 });

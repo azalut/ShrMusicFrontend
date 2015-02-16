@@ -4,5 +4,19 @@ var app = angular.module("mainApp", [
     "accountModule",
     "createModule",
     "dbxauthModule",
-    "filelistModule"
+    "filelistModule",
+    "loginModule"
 ]);
+
+
+app.config(function ($stateProvider) {
+    $stateProvider.state("home", {
+        url: "",
+        controller: "homeController",
+        templateUrl: "login-home.html"
+    });
+});
+
+app.controller("homeController", function ($scope, $cookies) {
+    $scope.kupa = "kuupaa";
+});
