@@ -18,5 +18,4 @@ app.config(function ($stateProvider) {
 });
 
 app.controller("homeController", function ($scope, $cookies) {
-    $scope.kupa = "kuupaa";
 });
